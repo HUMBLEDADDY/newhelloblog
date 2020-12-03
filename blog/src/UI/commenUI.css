@@ -1,0 +1,48 @@
+.bgc-maingreen {
+  background: #49726C;
+}
+.c-maingreen {
+  color: #49726C;
+}
+.bgc-mainyellow {
+  background: #E2D092;
+}
+.c-mainyellow {
+  color: #E2D092;
+}
+.bgc-lightgreen {
+  background: #ACC196;
+}
+.c-lightgreen {
+  color: #ACC196;
+}
+.bgc-darkgreen {
+  background: #153045;
+}
+.c-darkgreen {
+  color: #153045;
+}
+.bgc-lightgrey {
+  background: #f6f6f6;
+}
+.c-lightgrey {
+  color: #f6f6f6;
+}
+.bgc-darkgrey {
+  background: #505050;
+}
+.c-darkgrey {
+  color: #505050;
+}
+.bgc-black {
+  background: #0000 0;
+}
+.c-black {
+  color: #0000 0;
+}
+.bgc-white {
+  background: #ffffff;
+}
+.c-white {
+  color: #ffffff;
+}
