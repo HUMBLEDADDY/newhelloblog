@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+  background-color: #f5f5f5;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2em;
+}
+
+
+html{
+  font-size: 14px;
+}
+
+
+//颜色
+$colors: (
+
+  'maingreen': #49726C,
+
+  'mainyellow': #E2D092,
+
+  'lightgreen': #ACC196,
+
+  'darkgreen':#153045,
+
+  'lightgrey': #f6f6f6,
+
+  'darkgrey': #505050,
+
+  'black': #000000,
+
+  'white': #ffffff,
+
+);
+
+//字体大小  0.8rem ~ 2rem（1-13）
+$fs:(
+  8:0.8rem,
+  9:0.9rem,
+  10:1rem,
+  11:1.1rem,
+  12:1.2rem,
+  13:1.3rem,
+  14:1.4rem,
+  15:1.5rem,
+  16:1.6rem,
+  17:1.7rem,
+  18:1.8rem,
+  19:1.9rem,
+  20:2rem,
+);
+
+$total: 10;
+
+@function loopformp($col) {  
+  @return percentage($col/$total);  
+}
+
+@for $i from 1 through $total {  
+  .p-#{$i} {
+    padding: (5px * $i);
+  }
+  .p-t-#{$i} {
+    padding-top: (5px * $i);
+  }
+  .p-r-#{$i} {
+    padding-right: (5px * $i);
+  }
+  .p-b-#{$i} {
+    padding-bottom: (5px * $i);
+  }
+  .p-l-#{$i} {
+    padding-left: (5px * $i);
+  }
+  .m-#{$i} {
+    margin: (5px * $i);
+  }
+  .m-t-#{$i} {
+    margin-top: (5px * $i);
+  }
+  .m-r-#{$i} {
+    margin-right: (5px * $i);
+  }
+  .m-b-#{$i} {
+    margin-bottom: (5px * $i);
+  }
+  .m-l-#{$i} {
+    margin-left: (5px * $i);
+  }
+}
+
+
+//阴影
+.shadom1{
+  box-shadow: 5px 5px 10px rgba(50, 50, 50, 0.2);
+}
+
+//遍历颜色
+@each $key,$value in $colors {
+
+  .bgc-#{key} {
+
+      background: $value;
+
+  }
+
+  .c-#{key} {
+
+      color: $value;
+
+  }
+
+};
+
+//遍历字体大小
+@each $key,$value in $fs {
+  .fs-#{$key}{
+      font-size: $value;
+  }
+}

@@ -1,6 +1,4 @@
 import axios from "axios";
-import Vue from "vue";
-import router from "./router";
 
 const http = axios.create({
   baseURL: "http://zhouxug.cn:8080/hello/",
@@ -22,25 +20,5 @@ http.interceptors.request.use(
   }
 );
 
-http.interceptors.response.use(
-  (res) => {
-    return res;
-  },
-  (err) => {
-    console.log(err.response.data.message);
-    if (err.response.data.message) {
-      Vue.prototype.$message({
-        type: "error",
-        message: err.response.data.message,
-      });
-
-      if (err.response.status === 401) {
-        router.push("/login");
-      }
-    }
-
-    return Promise.reject(err);
-  }
-);
 
 export default http;
