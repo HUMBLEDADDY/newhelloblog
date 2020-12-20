@@ -1,14 +1,14 @@
 <template>
   <div class="main">
-    <div class="info">
-      <div class="indexlogo"></div>
-      <div class="logoname">HELLO</div>
-      <div class="mydream">{{ words.join("") }}</div>
-      <div class="writter">Designed by Z&B and IDK</div>
-      <div class="studio">Proudly published with @领航工作室</div>
+    <div class="head">
+      <div class="indexlogo m-l-7 m-t-7 m-r-1"></div>
+      <div class="bloginfo">
+        <div class="logoname fs-11">ONEBLOG</div>
+        <div class="mydream">{{ words.join("") }}</div>
+      </div>
     </div>
-    <div class="content">
-      <div class="head">
+    <!-- <div class="content">
+      <div class="directory">
         <div class="function">
           <router-link class="nav-link" tag="div" to="/">Home</router-link>
         </div>
@@ -26,57 +26,52 @@
       <div class="maincontent">
         <router-view></router-view>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <style lang="scss">
 .main {
-  width: 100%;
+  width: 80vw;
   height: 100vh;
-  .info {
-    background-color: #49726c;
+  margin: 0 auto;
+  .head {
     position: fixed;
-    width: 20%;
-    height: 100vh;
-    float: left;
-    border-right: 1px solid rgb(235, 235, 235);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    width: 80vw;
+    height: 200px;
     .indexlogo {
+      float:left;
       opacity: 0;
       animation: logoin 1s forwards;
-      border: 1px solid black;
-      width: 150px;
-      height: 150px;
+      width: 100px; 
+      height: 100px;
       border-radius: 150px;
       background-image: url(../assets/indexlogo.jpg);
-      background-position: 16px 17px;
-      background-size: 80%;
-      background-color: rgb(236, 222, 195);
+      background-position: -9px -10px;
+      background-size: 120%;
       background-repeat: no-repeat;
       position: relative;
-      margin-top: 30vh;
     }
-    .logoname {
+    .bloginfo{
+      float: left;
+      width: 150px;
+      top: 50px;
       position: relative;
-      margin-top: 2vh;
-      letter-spacing: 5px;
-      font-weight: bold;
-      font-size: 1em;
-      color: white;
-    }
-    .mydream {
-      display: block;
-      color: rgb(201, 201, 201);
-      margin-top: 2vh;
-      font-size: 0.9em;
-      white-space: nowrap;
-      animation: blink-caret 0.75s infinite;
-      border-right: 2px solid transparent;
-
-      overflow: hidden;
+      .logoname {
+        position: relative;
+        letter-spacing: 5px;
+        font-weight: bold;
+      }
+      .mydream {
+        display: inline-block;
+        color: rgb(201, 201, 201);
+        margin-top: 2vh;
+        font-size: 0.9em;
+        white-space: nowrap;
+        animation: blink-caret 0.75s infinite;
+        border-right: 2px solid transparent;
+        overflow: hidden;
+      }
     }
     .writter,
     .studio {
@@ -98,7 +93,7 @@
     position: relative;
     float: right;
     animation: contentin 1s forwards;
-    .head {
+    .directory {
       position: relative;
       height: 10vh;
       width: 100%;
@@ -155,47 +150,7 @@
   }
 }
 
-@keyframes contentin {
-  from {
-    top: -50px;
-  }
-  to {
-    top: 0px;
-  }
-}
-@keyframes logoin {
-  from {
-    left: -50px;
-    opacity: 0;
-    transform: rotate(-80deg);
-  }
-  to {
-    left: 0px;
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-}
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 13em;
-  }
-  100% {
-    width: 0;
-  }
-}
-/* 光标闪啊闪 */
-@keyframes blink-caret {
-  from,
-  to {
-    border-right: 1px solid rgba(0, 0, 0, 0);
-  }
-  50% {
-    border-right: 1px solid black;
-  }
-}
+
 </style>
 
 <script>

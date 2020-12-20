@@ -1,0 +1,41 @@
+@keyframes contentin {
+    from {
+      top: -50px;
+    }
+    to {
+      top: 0px;
+    }
+}
+@keyframes logoin {
+from {
+    left: -50px;
+    opacity: 0;
+    transform: rotate(-80deg);
+}
+to {
+    left: 0px;
+    opacity: 1;
+    transform: rotate(0deg);
+}
+}
+@keyframes typing {
+0% {
+    width: 0;
+}
+50% {
+    width: 13em;
+}
+100% {
+    width: 0;
+}
+}
+/* 光标闪啊闪 */
+@keyframes blink-caret {
+from,
+to {
+    border-right: 1px solid rgba(0, 0, 0, 0);
+}
+50% {
+    border-right: 1px solid black;
+}
+}

@@ -3,7 +3,7 @@
 }
 html {
   font-size: 15px;
-  background-color: #f5f5f5;
+  background-color: #fafafa;
 }
 body {
   margin: 0;
@@ -58,10 +58,6 @@ $fs:(
 
 $total: 10;
 
-@function loopformp($col) {  
-  @return percentage($col/$total);  
-}
-
 @for $i from 1 through $total {  
   .p-#{$i} {
     padding: (5px * $i);
@@ -104,13 +100,13 @@ $total: 10;
 //遍历颜色
 @each $key,$value in $colors {
 
-  .bgc-#{key} {
+  .bgc-#{$key} {
 
       background: $value;
 
   }
 
-  .c-#{key} {
+  .c-#{$key} {
 
       color: $value;
 
